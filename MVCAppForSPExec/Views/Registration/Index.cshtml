@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Registration.js"></script>
+<h2>Index</h2>
+
+<input type="hidden" id="hdnId" value="id" class="form-control" />
+<br />
+<input type="text" id="txtFirstName" placeholder="Please enter the FirstName of Patient" class="form-control" />
+<br />
+<input type="text" id="txtLastName" placeholder="Please enter the lastName of Patient" class="form-control" />
+<br />
+<input type="email" id="Email" placeholder="Please enter the email of Patient" class="form-control" />
+<br />
+<input type="text" id="txtpassword" placeholder="Please enter the Password" class="form-control" />
+<br />
+<input type="file" id="flPhoto" placeholder="Please upload the photo here" class="form-control" />
+<br />
+<input type="submit" id="btnSubmit" value="Submit" class="btn btn-info" onclick="saveRegistration()" />
+

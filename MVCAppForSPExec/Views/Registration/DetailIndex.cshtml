@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "DetailIndex";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Registration.js"></script>
+<h2>DetailIndex</h2>
+
+<input type="hidden" id="hdnId" value="@ViewBag.RegId" />
+
+<section id="why-us">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="container-lg">
+                    <table id="tblRegListById" class="table table-bordered table-responsive table-dark table-hover">
+                        <thead class="table-responsive">
+                            <tr class="table-responsive">
+                                <th class="table-primary">RegId</th>
+                                <th class="table-secondary">FirstName</th>
+                                <th class="table-active">LastName</th>
+                                <th class="table-danger">Email</th>
+                                <th class="table-warning">Password</th>
+                                <th class="table-info">Photo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="CategoryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="container" id="DetailCategory">
+                        <table id="tblRegListById" class="table table-bordered table-dark table-hover table-sm">
+                            <thead class="table-responsive">
+                                <tr class="table-responsive">
+                                    <th class="table-primary">RegId</th>
+                                    <th class="table-secondary">FirstName</th>
+                                    <th class="table-active">LastName</th>
+                                    <th class="table-danger">Email</th>
+                                    <th class="table-warning">Password</th>
+                                    <th class="table-info">Photo</th>
+
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

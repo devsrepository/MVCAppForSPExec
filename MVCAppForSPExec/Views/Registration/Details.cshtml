@@ -1,0 +1,51 @@
+﻿@model MVCAppForSPExec.Models.RegistrationModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        //Inline html helper
+        @helper MyListHelper(string[] str)
+            {
+    <ul>
+        @foreach(var item in str)
+    {
+        <li>@item</li>
+    }
+    </ul>
+    
+    }
+    </div>
+
+    <div>
+        <label>Example 1- Name List</label>
+        @MyListHelper(new string[] { "Asmita", "Amit", "Ivaan" });
+    </div>
+    //this div is for std html helper practice
+    <div>
+        @Html.ActionLink("Click Me","SaveRegistration","Registration")
+        @Html.ActionLink("Click Me","Details",new {name="Asmita"})
+        <br/>
+        @Html.TextBox("txtBox1", "val");
+        <input type="text" id="txtBox1" name="txtBox1" value="val" />
+       
+        <br/>
+        @Html.CheckBox("Checkbox1");
+        @Html.CheckBox("checkbox1",true,false)
+        @Html.TextBoxFor(a=>a.FirstName)
+        <br/>
+        @Html.TextAreaFor(m => m.Email, 2, 12, new {})
+        <br/>
+        @Html.PasswordFor(m=>m.Password)
+
+    </div>
+</body>
+</html>

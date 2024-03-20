@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Registration.js"></script>
+<h2>List</h2>
+
+<input type="hidden" id="hdnId" value="id" class="form-control" />
+<br />
+<input type="text" id="txtFirstName" placeholder="Please enter the FirstName of Patient" class="form-control" />
+<br />
+<input type="text" id="txtLastName" placeholder="Please enter the lastName of Patient" class="form-control" />
+<br />
+<input type="email" id="Email" placeholder="Please enter the email of Patient" class="form-control" />
+<br />
+<input type="text" id="txtpassword" placeholder="Please enter the Password" class="form-control" />
+<br />
+<input type="file" id="flPhoto" placeholder="Please upload the photo here" class="form-control" />
+<br />
+<input type="submit" id="btnSubmit" value="Submit" class="btn btn-info" onclick="saveRegistration()" />
+
+<section id="why-us">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="container-lg">
+                    <table id="tblRegistrationList" class="table table-bordered table-responsive table-dark table-hover">
+                        <thead class="table-responsive">
+                            <tr class="table-responsive">
+                                <th class="table-primary">Id</th>
+                                <th class="table-secondary">FirstName</th>
+                                <th class="table-active">LastName</th>
+                                <th class="table-danger">Email</th>
+                                <th class="table-warning">Password</th>
+                                <th class="table-info">Photo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="CategoryModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content modal-lg">
+                <div class="modal-body tab-content">
+                    <div class="container container-lg mt-3" id="tblAppointment">
+                        <table id="tblRegistrationList" class=" table table-bordered table-dark table-hover">
+                            <thead class="table-responsive">
+                                <tr class="table-responsive">
+                                    <th class="table-primary">Id</th>
+                                    <th class="table-secondary">FirstName</th>
+                                    <th class="table-active">LastName</th>
+                                    <th class="table-danger">Email</th>
+                                    <th class="table-warning">Password</th>
+                                    <th class="table-info">Photo</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
